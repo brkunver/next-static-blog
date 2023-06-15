@@ -15,7 +15,7 @@ async function PostsSection() {
   return (
     <section>
       {posts.map((item) => (
-        <SinglePost key={item.id} title={item.title} body={item.body} />
+        <SinglePost key={item.id} title={item.title} body={item.body} id={item.id} />
       ))}
     </section>
   )
