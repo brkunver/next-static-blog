@@ -1,4 +1,5 @@
 # Next.js Static Blog App
-in development
+
+Status : in development
 
 Navbar : ok

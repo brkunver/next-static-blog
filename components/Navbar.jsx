@@ -9,6 +9,7 @@ const Navbar = () => {
       <div className="flex text-lg text-center space-x-6 text-white">
         <Link href="/contact">Contact</Link>
         <Link href="/about">About</Link>
+        <a href="https://github.com/brkunver/next-static-blog">Github Repo</a>
         <a href="https://github.com/brkunver">github/brkunver</a>
         <a href="https://nextjs.org/docs">Next.js Docs</a>
         <a href="https://jsonplaceholder.typicode.com/">Json Placeholder</a>
