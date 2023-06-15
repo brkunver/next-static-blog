@@ -7,7 +7,7 @@ async function PostPage({ params }) {
   const post = await getPost(params.postId)
 
   return (
-    <div>
+    <div className="container mx-auto">
       <h1>{post.title}</h1>
       <p>{post.body}</p>
     </div>
