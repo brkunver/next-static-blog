@@ -38,8 +38,8 @@ const Navbar = () => {
       </nav>
 
       <div
-        className={`flex flex-col items-center text-center font-bold bg-white transition-opacity ease-in-out delay-200 duration-300 ${
-          isMenuVisible ? "opacity-100" : "opacity-0 h-0"
+        className={`items-center text-center font-bold underline bg-white ${
+          isMenuVisible ? "flex flex-col" : "hidden"
         }`}
       >
         <Link href="/contact">Contact</Link>
