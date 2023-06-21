@@ -6,11 +6,9 @@ export const metadata = {
   description: "Nextjs Static Blog app",
 }
 
-
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <body>
         <Navbar />
         {children}
