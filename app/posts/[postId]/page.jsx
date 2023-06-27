@@ -1,8 +1,9 @@
 import Link from "next/link"
+import axios from "axios";
 
 async function getPost(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { next: { revalidate: 60 } })
-  return res.json()
+  const res = await axios.get(`https://dummyjson.com/posts/${id}`)
+    return res.data
 }
 
 async function PostPage({ params }) {

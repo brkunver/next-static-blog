@@ -1,17 +1,13 @@
 import SinglePost from "./SinglePost"
+import axios from "axios";
 
 async function getPosts() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=20", {
-    next: {
-      revalidate: 60,
-    },
-  })
-  return response.json()
+  const response = await axios.get("https://dummyjson.com/posts")
+  return response.data
 }
 
 async function PostsSection() {
-  const posts = await getPosts()
-  console.log(posts[0])
+  const {posts} = await getPosts()
   return (
     <section className="lg:grid lg:grid-cols-2 lg:gap-4">
       {posts.map((item) => (
