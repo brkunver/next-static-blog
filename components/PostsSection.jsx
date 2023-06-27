@@ -11,7 +11,6 @@ async function getPosts() {
 
 async function PostsSection() {
   const posts = await getPosts()
-  console.log(posts[0])
   return (
     <section className="lg:grid lg:grid-cols-2 lg:gap-4">
       {posts.map((item) => (
