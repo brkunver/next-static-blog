@@ -1,9 +1,12 @@
 import SinglePost from "./SinglePost"
-import axios from "axios";
 
 async function getPosts() {
-  const response = await axios.get("https://dummyjson.com/posts")
-  return response.data
+  const response = await fetch("https://dummyjson.com/posts", {
+    next: {
+      revalidate: 60,
+    },
+  })
+  return response.json()
 }
 
 async function PostsSection() {

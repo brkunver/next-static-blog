@@ -1,9 +1,8 @@
 import Link from "next/link"
-import axios from "axios";
 
 async function getPost(id) {
-  const res = await axios.get(`https://dummyjson.com/posts/${id}`)
-    return res.data
+    const res = await fetch(`https://dummyjson.com/posts/${id}`, { next: { revalidate: 60 } })
+    return res.json()
 }
 
 async function PostPage({ params }) {
