@@ -1,7 +1,7 @@
 import SinglePost from "./SinglePost"
 
 async function getPosts() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=20", {
+  const response = await fetch("https://dummyjson.com/posts", {
     next: {
       revalidate: 60,
     },
@@ -10,8 +10,7 @@ async function getPosts() {
 }
 
 async function PostsSection() {
-  const posts = await getPosts()
-  console.log(posts[0])
+  const {posts} = await getPosts()
   return (
     <section className="lg:grid lg:grid-cols-2 lg:gap-4">
       {posts.map((item) => (

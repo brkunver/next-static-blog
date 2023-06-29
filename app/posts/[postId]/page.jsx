@@ -1,8 +1,8 @@
 import Link from "next/link"
 
 async function getPost(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { next: { revalidate: 60 } })
-  return res.json()
+    const res = await fetch(`https://dummyjson.com/posts/${id}`, { next: { revalidate: 60 } })
+    return res.json()
 }
 
 async function PostPage({ params }) {
